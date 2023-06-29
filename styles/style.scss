@@ -1,0 +1,271 @@
+//Mixins
+
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: $direction;
+}
+
+// Variables
+
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
+
+//OVERALL
+body {
+  @include flexCenter(column);
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: white;
+  height: 100vh;
+  background: url(../images/bg-intro-mobile.png);
+  background-color: $Red;
+  min-height: 1000px;
+}
+
+.container {
+  @include flexCenter(column);
+  height: 940px;
+  width: 325px;
+  justify-content: space-between;
+}
+
+//MAIN
+
+main {
+  @include flexCenter(column);
+  justify-content: space-between;
+  height: 100%;
+  h1 {
+    margin-bottom: 0;
+    font-size: 27px;
+    margin-top: 65px;
+  }
+  p {
+    margin-top: -5px;
+    margin-bottom: 0px;
+  }
+  .free-trial {
+    @include flexCenter(column);
+    height: 90px;
+    background-color: $Blue;
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+    margin-bottom: 5px;
+    p {
+      padding: 0 50px;
+      margin: 0;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+  form {
+    @include flexCenter(column);
+    height: 425px;
+    background-color: white;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+    padding-top: 20px;
+    position: relative;
+    input {
+      width: 85%;
+      height: 11.5%;
+      border-radius: 5px;
+      border: 1px solid rgb(224, 221, 221);
+      text-indent: 15px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      &::placeholder {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      width: 87%;
+      height: 11.5%;
+      border-radius: 5px;
+      background-color: $Green;
+      color: white;
+      letter-spacing: 0.1rem;
+      border: none;
+      box-shadow: 0px 2px 4px green;
+      cursor: pointer;
+      &:hover {
+        opacity: 80%;
+      }
+    }
+    p {
+      width: 75%;
+      color: $grayishBlue;
+      font-size: 11px;
+      line-height: 1.2rem;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      span {
+        color: $Red;
+        font-weight: 700;
+      }
+    }
+    #first-name {
+      margin-top: 8px;
+    }
+    .error {
+      color: $Red;
+      text-align: right;
+      margin-right: 0;
+      width: 85%;
+      margin-top: -5px;
+
+      height: 0px;
+    }
+    .error-icon {
+      position: absolute;
+    }
+    .error-icon-1 {
+      top: 42px;
+      right: 40px;
+    }
+    .error-icon-2 {
+      top: 115px;
+      right: 40px;
+    }
+    .error-icon-3 {
+      top: 190px;
+      right: 40px;
+    }
+    .error-icon-4 {
+      top: 265px;
+      right: 40px;
+    }
+  }
+}
+
+.text-container {
+  @include flexCenter(column);
+  height: 284px;
+  justify-content: space-between;
+}
+
+.form-container {
+  @include flexCenter(column);
+  height: 555px;
+  justify-content: space-between;
+}
+//FOOTER
+
+footer {
+  .attribution {
+    font-size: 10px;
+    text-align: center;
+    color: $darkBlue;
+    a {
+      color: $darkBlue;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+// JS
+
+.hidden {
+  visibility: hidden;
+}
+
+.removed {
+  display: none;
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    @include flexCenter(column);
+    height: 100vh;
+  }
+  body {
+    justify-content: space-between;
+    height: 800px;
+    min-height: 800px;
+    background: url(../images/bg-intro-desktop.png);
+    background-color: $Red;
+  }
+  .container {
+    width: 1150px;
+    height: 800px;
+    justify-content: space-between;
+  }
+  main {
+    flex-direction: row;
+    .text-container {
+      height: 284px;
+      width: 50%;
+      align-items: left;
+      justify-content: left;
+      justify-content: space-around;
+      text-align: left;
+      h1 {
+        font-size: 50px;
+        line-height: 60px;
+        margin-top: 30px;
+      }
+      p {
+        text-align: left;
+        margin-right: 40px;
+      }
+    }
+    .form-container {
+      align-items: flex-end;
+      height: 580px;
+      width: 47%;
+      margin-top: 40px;
+      justify-content: space-around;
+      padding-right: 40px;
+      .free-trial {
+        width: 100%;
+        height: 60px;
+      }
+      form {
+        width: 100%;
+        height: 470px;
+        input {
+          height: 11%;
+        }
+        #first-name {
+          margin-top: 15px;
+        }
+        .disclaimer {
+          margin-top: 2px;
+          margin-bottom: 30px;
+        }
+        .error-icon-1 {
+          top: 52px;
+          right: 60px;
+        }
+        .error-icon-2 {
+          top: 135px;
+          right: 60px;
+        }
+        .error-icon-3 {
+          top: 220px;
+          right: 60px;
+        }
+        .error-icon-4 {
+          top: 305px;
+          right: 60px;
+        }
+      }
+    }
+  }
+}

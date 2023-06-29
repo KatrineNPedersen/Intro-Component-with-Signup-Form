@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <div class="text-container">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+        <div class="form-container">
+          <div class="free-trial">
+            <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+          </div>
+          <form action="#">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              required
+            />
+            <p class="error first-name hidden">
+              <em>First Name cannot be empty</em>
+            </p>
+            <img
+              class="error-icon error-icon-1 hidden"
+              src="images/icon-error.svg"
+              alt="error-icon"
+            />
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last Name"
+              required
+            />
+            <p class="error last-name hidden">
+              <em>Last Name cannot be empty</em>
+            </p>
+            <img
+              class="error-icon error-icon-2 hidden"
+              src="images/icon-error.svg"
+              alt="error-icon"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+            <p class="error email hidden"><em>Email cannot be empty</em></p>
+            <img
+              class="error-icon error-icon-3 hidden"
+              src="images/icon-error.svg"
+              alt="error-icon"
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <p class="error password hidden">
+              <em>Password cannot be empty</em>
+            </p>
+            <img
+              class="error-icon error-icon-4 hidden"
+              src="images/icon-error.svg"
+              alt="error-icon"
+            />
+            <button type="submit">CLAIM YOUR FREE TRIAL</button>
+            <p class="disclaimer">
+              By clicking the button, you are agreeing to our
+              <span>Terms and Services</span>
+            </p>
+          </form>
+        </div>
+      </main>
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://www.frontendmentor.io/profile/KatrineNPedersen"
+            target="_blank"
+            >Katrine N Pedersen</a
+          >.
+        </p>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

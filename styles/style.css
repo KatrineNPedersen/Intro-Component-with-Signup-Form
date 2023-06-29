@@ -1,0 +1,280 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: white;
+  height: 100vh;
+  background: url(../images/bg-intro-mobile.png);
+  background-color: hsl(0, 100%, 74%);
+  min-height: 1000px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 940px;
+  width: 325px;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+main h1 {
+  margin-bottom: 0;
+  font-size: 27px;
+  margin-top: 65px;
+}
+main p {
+  margin-top: -5px;
+  margin-bottom: 0px;
+}
+main .free-trial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90px;
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 5px;
+}
+main .free-trial p {
+  padding: 0 50px;
+  margin: 0;
+}
+main .free-trial span {
+  font-weight: 700;
+}
+main form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 425px;
+  background-color: white;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+  padding-top: 20px;
+  position: relative;
+}
+main form input {
+  width: 85%;
+  height: 11.5%;
+  border-radius: 5px;
+  border: 1px solid rgb(224, 221, 221);
+  text-indent: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+main form input::-moz-placeholder {
+  font-weight: 600;
+  font-size: 14px;
+}
+main form input::placeholder {
+  font-weight: 600;
+  font-size: 14px;
+}
+main form input:focus {
+  outline: none;
+}
+main form button {
+  width: 87%;
+  height: 11.5%;
+  border-radius: 5px;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  letter-spacing: 0.1rem;
+  border: none;
+  box-shadow: 0px 2px 4px green;
+  cursor: pointer;
+}
+main form button:hover {
+  opacity: 80%;
+}
+main form p {
+  width: 75%;
+  color: hsl(246, 25%, 77%);
+  font-size: 11px;
+  line-height: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+main form p span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+main form #first-name {
+  margin-top: 8px;
+}
+main form .error {
+  color: hsl(0, 100%, 74%);
+  text-align: right;
+  margin-right: 0;
+  width: 85%;
+  margin-top: -5px;
+  height: 0px;
+}
+main form .error-icon {
+  position: absolute;
+}
+main form .error-icon-1 {
+  top: 42px;
+  right: 40px;
+}
+main form .error-icon-2 {
+  top: 115px;
+  right: 40px;
+}
+main form .error-icon-3 {
+  top: 190px;
+  right: 40px;
+}
+main form .error-icon-4 {
+  top: 265px;
+  right: 40px;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 284px;
+  justify-content: space-between;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 555px;
+  justify-content: space-between;
+}
+
+footer .attribution {
+  font-size: 10px;
+  text-align: center;
+  color: hsl(249, 10%, 26%);
+}
+footer .attribution a {
+  color: hsl(249, 10%, 26%);
+}
+footer .attribution a:hover {
+  color: white;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.removed {
+  display: none;
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  body {
+    justify-content: space-between;
+    height: 800px;
+    min-height: 800px;
+    background: url(../images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+  }
+  .container {
+    width: 1150px;
+    height: 800px;
+    justify-content: space-between;
+  }
+  main {
+    flex-direction: row;
+  }
+  main .text-container {
+    height: 284px;
+    width: 50%;
+    align-items: left;
+    justify-content: left;
+    justify-content: space-around;
+    text-align: left;
+  }
+  main .text-container h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-top: 30px;
+  }
+  main .text-container p {
+    text-align: left;
+    margin-right: 40px;
+  }
+  main .form-container {
+    align-items: flex-end;
+    height: 580px;
+    width: 47%;
+    margin-top: 40px;
+    justify-content: space-around;
+    padding-right: 40px;
+  }
+  main .form-container .free-trial {
+    width: 100%;
+    height: 60px;
+  }
+  main .form-container form {
+    width: 100%;
+    height: 470px;
+  }
+  main .form-container form input {
+    height: 11%;
+  }
+  main .form-container form #first-name {
+    margin-top: 15px;
+  }
+  main .form-container form .disclaimer {
+    margin-top: 2px;
+    margin-bottom: 30px;
+  }
+  main .form-container form .error-icon-1 {
+    top: 52px;
+    right: 60px;
+  }
+  main .form-container form .error-icon-2 {
+    top: 135px;
+    right: 60px;
+  }
+  main .form-container form .error-icon-3 {
+    top: 220px;
+    right: 60px;
+  }
+  main .form-container form .error-icon-4 {
+    top: 305px;
+    right: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */
